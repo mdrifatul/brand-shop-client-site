@@ -1,8 +1,11 @@
+import { useLoaderData } from "react-router-dom";
 import Swal from 'sweetalert2';
 
-const AddProduct = () => {
-  
-  const handleAddcars = (e) =>{
+const Update = () => {
+  const cars = useLoaderData();
+  const  {_id,name,  brand_name, type, price, description,photo,rating} = cars
+
+  const handleUpdate = (e) =>{
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
@@ -13,20 +16,21 @@ const AddProduct = () => {
     const photo = form.photo.value;
     const rating = form.rating.value;
 
-    const newCar = {name,  brand_name, type, price, description,photo,rating}
+    const updateCar = {name,  brand_name, type, price, description,photo,rating}
+    // console.log(updateCar);
 
-    // send data to the server
-    fetch('http://localhost:5000/cars',{
-      method: "POST",
+
+    fetch(`http://localhost:5000/cars/${_id}`,{
+      method: "PUT",
       headers: {
         'content-type': 'application/json'
     },
-    body: JSON.stringify(newCar)
+    body: JSON.stringify(updateCar)
     })
     .then(res => res.json())
     .then(data=> {
       console.log(data)
-      if(data.insertedId){
+      if(data.modifiedCount >0){
         Swal.fire({
           title: 'Success',
           text: 'Add Successfully',
@@ -36,11 +40,9 @@ const AddProduct = () => {
       }
     })
   }
-
-
   return (
-    <>
-      <form  onSubmit={handleAddcars} className="card-body md:w-3/6 mx-auto">
+    <div>
+      <form  onSubmit={handleUpdate} className="card-body md:w-3/6 mx-auto">
         <div className="md:flex md:gap-6">
         <div className="form-control w-full">
         <label className="label">
@@ -50,6 +52,7 @@ const AddProduct = () => {
             type="text"
             placeholder="Name"
             name="name"
+            defaultValue={name}
             className="input input-bordered mb-2"
             required
           />
@@ -61,6 +64,7 @@ const AddProduct = () => {
           <input
             type="text"
             placeholder="Brand Name"
+            defaultValue={brand_name}
             className="input input-bordered"
             name="brand_name"
             required
@@ -75,6 +79,7 @@ const AddProduct = () => {
           <input
             type="text"
             placeholder="Type"
+            defaultValue={type}
             className="input input-bordered mb-2"
             name="type"
             required
@@ -85,8 +90,9 @@ const AddProduct = () => {
             <span className="label-text">Price</span>
           </label>
           <input
-            type="number"
+            type="text"
             placeholder="Price"
+            defaultValue={price}
             className="input input-bordered"
             name="price"
             required
@@ -100,6 +106,7 @@ const AddProduct = () => {
           <textarea
             type="text"
             placeholder="Short Description"
+            defaultValue={description}
             className="input input-bordered w-full"
             name="description"
             required
@@ -113,6 +120,7 @@ const AddProduct = () => {
           <input
             type="text"
             placeholder="Photo URL"
+            defaultValue={photo}
             className="input input-bordered mb-2"
             name="photo"
             required
@@ -125,19 +133,23 @@ const AddProduct = () => {
           <input
             type="number"
             placeholder="Rating"
+            min="0"
+            max="10"
+            defaultValue={rating}
             className="input input-bordered"
             name="rating"
             required
           />
+
         </div>
         </div>
 
         <div className="form-control mt-6 w-52 mx-auto">
-          <button className="btn text-white bg-red-500">Add</button>
+          <button className="btn text-white bg-red-500">Submit</button>
         </div>
       </form>
-    </>
+    </div>
   );
 };
 
-export default AddProduct;
+export default Update;

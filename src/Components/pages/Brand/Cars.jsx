@@ -3,7 +3,7 @@ import Car from "./Car";
 
 const Cars = () => {
   const cars = useLoaderData()
-  console.log(cars);
+  // console.log(cars);
 
   return (
     <div>
