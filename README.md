@@ -1,8 +1,14 @@
-# React + Vite
+Website Name : DriveWare
+Website link : https://drivewave-c7ec5.web.app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Feature of this website\
 
-Currently, two official plugins are available:
+1. Add product , Mycart, product details and update are private route if the user not login he/shw can not access to those page.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. If the user goes to the add product there have ta form of add product. If the user add any product every information of input fild will be store in the data base.
+
+3. IF the user click on update button user can update data of that specific card which user have clicked.
+
+4. In the details page if user add any product to mychart the product will add on mychart page and the product data will be store in the batabase.
+
+5. In mycart page any product on the page that the user had added can be deleted.
