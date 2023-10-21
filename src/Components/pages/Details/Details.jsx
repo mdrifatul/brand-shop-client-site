@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 
 const Details = () => {
   const loaddata = useLoaderData();
+  const {_id, ...addtoCart} = loaddata
   const {name, photo, price} = loaddata
 
 
@@ -12,7 +13,7 @@ const Details = () => {
       headers: {
         'content-type': 'application/json'
       },
-      body: JSON.stringify(loaddata)
+      body: JSON.stringify(addtoCart)
     })
     .then(res => res.json())
     .then(data =>{
@@ -27,7 +28,6 @@ const Details = () => {
       }
     })
   }
-
 
 
   return (

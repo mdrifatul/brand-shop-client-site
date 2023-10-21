@@ -2,8 +2,7 @@ import Swal from "sweetalert2";
 
 
 const Mycart = ({cart, carts, setCarts}) => {
-  const {_id, name,photo, brand_name, price, description, rating, type} = cart
-  console.log(_id);
+  const {_id, name,photo, brand_name, price} = cart
 
   const handleDelete = _id =>{
     Swal.fire({
@@ -29,8 +28,6 @@ const Mycart = ({cart, carts, setCarts}) => {
               'success'
             )
             const remaining = carts.filter(deletecart => deletecart._id !== _id);
-            // console.log(carts);
-            // console.log(remaining);
             setCarts(remaining); 
           }
           console.log(data)

@@ -1,32 +1,32 @@
 [
   {
     "id": "1",
-    "brand_name": "BMW",
+    "brandName": "BMW",
     "image": "https://i.ibb.co/9NjChjh/jon-koop-kh-YVy-Hi-NZo0-unsplash.jpg"
   },
   {
     "id": "2",
-    "brand_name": "Mercedes-Benz",
+    "brandName": "Mercedes-Benz",
     "image": "https://i.ibb.co/Svp4TLM/oguz-yagiz-kara-I-Q9k-Kf2-Mv-U-unsplash.jpg"
   },
   {
     "id": "3",
-    "brand_name": "Toyota",
+    "brandName": "Toyota",
     "image": "https://i.ibb.co/CH5xy9X/dusty-barnes-o7fq-Z18-YFXc-unsplash.jpg"
   },
   {
     "id": "4",
-    "brand_name": "Ford",
+    "brandName": "Ford",
     "image": "https://i.ibb.co/PrvsnTK/fourfour-G3-Irirjfl8s-unsplash.jpg"
   },
   {
     "id": "5",
-    "brand_name": "Honda",
+    "brandName": "Honda",
     "image": "https://i.ibb.co/ZchcSmp/c-joyful-MPCKq5-Amr9w-unsplash.jpg"
   },
   {
     "id": "6",
-    "brand_name": "Tesla",
+    "brandName": "Tesla",
     "image": "https://i.ibb.co/k2r65CM/tesla-fans-schweiz-7-OQMgo-Gz-Dw-unsplash.jpg"
   }
 ]

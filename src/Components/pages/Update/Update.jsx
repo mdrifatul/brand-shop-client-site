@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 
 const Update = () => {
   const cars = useLoaderData();
+  // console.log(cars);
   const  {_id,name,  brand_name, type, price, description,photo,rating} = cars
 
   const handleUpdate = (e) =>{
