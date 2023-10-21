@@ -32,19 +32,19 @@ const navLink = (
 
 const Navbar = () => {
 
-  const [theme, setTheme] = useState(localStorage.getItem('theme')? localStorage.getItem('theme'):'cupcake');
-  useEffect(()=>{
-    localStorage.setItem("theme", theme)
-    const localTheme = localStorage.getItem('theme');
-    document.querySelector('html').setAttribute("data-theme",localTheme)
-  },[theme])
 
-const handleToggletheme = (e) =>{
-  if(e.target.checked){
-    setTheme('dark')
+const [theme, setTheme] = useState('light')
+
+useEffect(() =>{
+  if(theme === "dark"){
+    document.documentElement.classList.add('dark');
   }else{
-    setTheme("cupcake")
+    document.documentElement.classList.remove('dark');
   }
+},[theme]) 
+
+const handleToggletheme = () =>{
+  setTheme(theme === "dark" ? "light" : "dark")
 }
 
 
@@ -58,7 +58,7 @@ const handleToggletheme = (e) =>{
 
   return (
     <div>
-    <div className="navbar px-5 dark:text-white">
+    <div className="navbar px-5 dark:bg-black dark:text-white">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
