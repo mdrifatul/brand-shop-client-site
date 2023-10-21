@@ -16,7 +16,7 @@ const AddProduct = () => {
     const newCar = {name,  brand_name, type, price, description,photo,rating}
 
     // send data to the server
-    fetch('http://localhost:5000/cars',{
+    fetch('https://brand-shop-server-oqg51gya7-mohammed-rifatul-islams-projects.vercel.app/cars',{
       method: "POST",
       headers: {
         'content-type': 'application/json'

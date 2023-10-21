@@ -31,7 +31,7 @@ const Router = createBrowserRouter([
       {
         path:'/cars/:brandNames',
         element: <Cars></Cars>,
-        loader: ({params}) => fetch(`http://localhost:5000/car/${params.brandNames}`)
+        loader: ({params}) => fetch(`https://brand-shop-server-oqg51gya7-mohammed-rifatul-islams-projects.vercel.app/car/${params.brandNames}`)
       },
       {
         path:'/login',
@@ -44,17 +44,17 @@ const Router = createBrowserRouter([
       {
         path:'/update/:id',
         element: <PrivateRouter><Update></Update></PrivateRouter>,
-        loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+        loader: ({params}) => fetch(`https://brand-shop-server-oqg51gya7-mohammed-rifatul-islams-projects.vercel.app/cars/${params.id}`)
       },
       {
         path:'/details/:id',
         element: <PrivateRouter><Details></Details></PrivateRouter>,
-        loader: ({params}) => fetch(`http://localhost:5000/cars/${params.id}`)
+        loader: ({params}) => fetch(`https://brand-shop-server-oqg51gya7-mohammed-rifatul-islams-projects.vercel.app/cars/${params.id}`)
       },
       {
         path:'/mycart',
         element: <PrivateRouter><Mycarts></Mycarts></PrivateRouter>,
-        loader: () => fetch(`http://localhost:5000/carts`)
+        loader: () => fetch(`https://brand-shop-server-oqg51gya7-mohammed-rifatul-islams-projects.vercel.app/carts`)
       },
 
     ]

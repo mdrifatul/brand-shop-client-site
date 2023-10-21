@@ -9,7 +9,7 @@ const Details = () => {
 
 
   const handleAddcart = () =>{
-    fetch('http://localhost:5000/carts',{
+    fetch('https://brand-shop-server-oqg51gya7-mohammed-rifatul-islams-projects.vercel.app/carts',{
       method: "POST",
       headers: {
         'content-type': 'application/json'

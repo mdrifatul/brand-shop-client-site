@@ -21,7 +21,7 @@ const Update = () => {
     // console.log(updateCar);
 
 
-    fetch(`http://localhost:5000/cars/${_id}`,{
+    fetch(`https://brand-shop-server-oqg51gya7-mohammed-rifatul-islams-projects.vercel.app/cars/${_id}`,{
       method: "PUT",
       headers: {
         'content-type': 'application/json'

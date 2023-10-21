@@ -16,7 +16,7 @@ const Mycart = ({cart, carts, setCarts}) => {
   }).then((result) => {
       if (result.isConfirmed){
         console.log("delete conform");
-        fetch(`http://localhost:5000/carts/${_id}`,{
+        fetch(`https://brand-shop-server-oqg51gya7-mohammed-rifatul-islams-projects.vercel.app/carts/${_id}`,{
           method: "DELETE",
         })
         .then(res =>res.json())
