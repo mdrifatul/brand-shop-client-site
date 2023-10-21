@@ -40,7 +40,7 @@ const Mycart = ({cart, carts, setCarts}) => {
   return (
     <div>
       <div className="card bg-gray-800 shadow-xl">
-        <figure><img src={photo} alt="Shoes" /></figure>
+        <figure><img className="h-72" src={photo} alt="Shoes" /></figure>
         <div className="card-body text-white">
           <h2 className="card-title text-2xl font-bold">{name}</h2>
           <div className="flex justify-between">

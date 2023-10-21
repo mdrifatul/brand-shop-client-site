@@ -6,7 +6,7 @@ const AddProduct = () => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    const brand_name = form.brand_name.value;
+    const brand_name = form.brand_name.value.toUpperCase();
     const type = form.type.value;
     const price = form.price.value;
     const description = form.description.value;

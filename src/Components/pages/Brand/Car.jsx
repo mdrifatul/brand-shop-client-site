@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 const Car = ({car}) => {
-  const {_id, name,photo, brand_name, price, description, rating, type} = car
+  const {_id, name,photo, brand_name, price, rating, type} = car
   return (
-    <div>
-      <div className="card bg-gray-800 shadow-xl">
-        <figure><img src={photo} alt="Shoes" /></figure>
+    <div className="">
+          <div className="card bg-gray-800 shadow-xl">
+        <figure><img className="h-72 w-full" src={photo} alt="Shoes" /></figure>
         <div className="card-body text-white">
           <h2 className="card-title text-2xl font-bold">{name}</h2>
           <div className="flex justify-between">
