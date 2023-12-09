@@ -9,5 +9,7 @@ full-stack solution for users to purchase vehicles directly through the website'
 
 • To participate contest user must authenticated by providing
 an email and password.
+
 • JWT Auth is implemented.
+
 • Dark Mode
